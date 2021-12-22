@@ -1,0 +1,76 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#F9C5D5,#FEE3EC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid red; */
+}
+.player_container{
+    /* background: linear-gradient(#7267CB,#98BAE7,#B8E4F0); */
+    background-color: gray;
+    width: 20%;
+    min-width: 250px;
+    max-width: 500px;
+    height: 70%;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 20px 20px 15px #888888;
+}
+.title{
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: white;
+}
+.singerName{
+    color: rgba(255, 68, 0, 0.616);
+}
+.cd{
+    width: 170px;
+    height: 170px;
+    align-self: center;
+    text-align: center;
+    border-radius: 50%;
+    /* border: 5px solid red; */
+}
+.rotate{
+    animation: rotation 3s linear infinite;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.controlers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 5px solid red; */
+    margin-bottom: 18px;
+}
+.fas{
+    width: 25%;
+    min-width: 40px;
+    height: 92%;
+    min-height: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding-top: 18px; 
+    text-align: center;
+}
+.fas:hover{
+    background-color: white;
+    color: black;
+}

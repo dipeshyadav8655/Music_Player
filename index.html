@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b6c497e1f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="player_container">
+            <div class="title" id="title">
+                <h1 class="songName" id="songName">Song Name</h1>
+                <h3 class="singerName" id="singerName">Singer</h3>
+            </div>
+            <img src="./music.jpeg" alt="cdimage" class="cd" id="cd">
+            <div class="audio">
+                <audio src="1st_music.mp3" id="music"></audio>
+            </div>
+            <div class="controlers">
+                <i class="fas fa-backward backward" id="backward" title="Previous"></i>
+                <i class="fas fa-play play" id="play" title="Play"></i>
+                <i class="fas fa-forward forward" id="forward" title="Next"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let music=document.getElementById("music");
+    let cd=document.getElementById("cd");
+    let play=document.getElementById("play");
+    let playing=true;
+
+    play.addEventListener("click",playMusic);
+
+
+
+   function playMusic(){
+       if(playing){
+           music.play();
+           playing=false;
+           play.classList.add("fa-pause");
+           play.classList.remove("fa-play");
+           cd.classList.add("rotate");
+       }else{
+           music.pause();
+           playing=true;
+           play.classList.remove("fa-pause");
+           play.classList.add("fa-play");
+           cd.classList.remove("rotate");
+       }
+   }
+</script>
